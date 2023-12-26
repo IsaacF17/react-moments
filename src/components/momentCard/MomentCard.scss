@@ -1,0 +1,60 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 450px;
+  align-items: center;
+
+  .card {
+    width: 950px;
+    height: 300px;
+    border: 4px solid;
+    border-image: linear-gradient(to right, #adadad, #393939) 1 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 27px;
+        text-align: justify;
+        max-width: 750px;
+        display: block;
+
+        &#phrase-author {
+            width: 100%;
+            text-align: end;
+        }
+    }
+
+    .icon-rating {
+        display: flex;
+        justify-content: flex-end;
+        width: 750px;
+        margin-top: 35px;
+
+        i {
+            padding: 10px;
+            font-size: 25px;
+            &:hover {
+                cursor: pointer;
+                &.fa-face-smile-beam {
+                    @include rotate-face-animation(happy);
+                }
+                &.fa-face-frown {
+                    @include rotate-face-animation(upset);
+                }
+                &.fa-face-angry {
+                    @include rotate-face-animation(angry);
+                }
+            }
+        }
+    }
+  }
+}
+
+

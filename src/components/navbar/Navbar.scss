@@ -1,0 +1,98 @@
+@import '../../styles/variables.scss';
+
+.navbar-container {
+  font-family: Nunito;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    margin-left: 20px;
+    span {
+      color: $text-primary;
+      font-size: 27px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #bars-icon {
+    color: black;
+    display: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .inline-ul {
+    display: flex;
+    margin-right: 20px;
+    ul {
+      list-style: none;
+      display: inline;
+      padding-left: 20px;
+      margin-top: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: $text-gray;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.dropdown-container {
+  background-color: #003566;
+  ul {
+    padding-inline-start: 10px;
+  }
+  ul > li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      font-size: 24px;
+      color: black;
+    }
+  }
+}
+
+@media (min-width: 220px) and (max-width: 480px) {
+  .navbar-container {
+    .group-two,
+    .group-one {
+      ul {
+        display: none;
+      }
+    }
+    #bars-icon {
+      display: block;
+      font-size: 24px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 660px) {
+  .navbar-container {
+    .group-two {
+      ul {
+        display: none;
+      }
+    }
+    #bars-icon {
+      display: block;
+      font-size: 24px;
+      margin-right: 20px;
+    }
+  }
+}

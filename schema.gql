@@ -1,0 +1,25 @@
+type Reaction {
+    reactionType: String
+    quantity: Int
+    moment: Moment @relation
+}
+
+type Moment {
+    creationDate: String
+    moment: String
+    reaction: [Reaction] @relation
+}
+
+input ReactionInput {
+    reactionType: String
+    quantity: Int
+}
+
+type Query {
+    allMoments: [Moment!]
+    momentsByDate (creationDate: String): [Moment!]
+}
+
+type Mutation {
+    addMoment (creationDate: String!, moment: String!, reaction: ReactionInput) : Moment @resolver
+}
