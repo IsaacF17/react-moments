@@ -2,6 +2,7 @@
   "name": "moments",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://isaacf17.github.io/react-moments/",
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@apollo/react-hooks": "^4.0.0",
