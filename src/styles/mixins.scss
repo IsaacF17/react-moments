@@ -1,5 +1,6 @@
 @mixin rotate-face-animation($emotion) {
   animation: rotation 2s;
+
   @keyframes rotation {
     @if $emotion == happy {
       from {
@@ -8,8 +9,7 @@
       to {
         transform: rotate(360deg);
       }
-    } 
-    @else if $emotion == angry {
+    } @else if $emotion == angry {
       0% {
         transform: rotate(0deg);
       }
@@ -22,17 +22,16 @@
       100% {
         transform: rotate(0deg);
       }
-    } 
-    @else if $emotion == upset {
-        0% {
-          transform: rotate(0deg);
-        }
-        50% {
-          transform: rotate(90deg);
-        }
-        100% {
-          transform: rotate(0deg);
-        }
+    } @else if $emotion == upset {
+      0% {
+        transform: rotate(0deg);
       }
+      50% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
   }
 }
