@@ -28,7 +28,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: ./build
+          folder: ./build
   # Deployment job
   deploy:
     environment:
